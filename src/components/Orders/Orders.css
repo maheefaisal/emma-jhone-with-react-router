@@ -1,3 +1,17 @@
-.review-container{
-    margin: 55px auto;
+.review-container {
+  margin: 55px auto;
+}
+.button-proceed {
+  background-color: lightcoral;
+  border-radius: 10px;
+  width: 100%;
+  margin: 10px auto;
+  color: whitesmoke;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.proceed-link{
+    text-decoration: none;
 }

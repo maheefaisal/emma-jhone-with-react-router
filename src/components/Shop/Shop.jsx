@@ -5,9 +5,9 @@ import {
   addToDb,
   deleteShoppingCart,
   getShoppingCart,
-
 } from "../../utilities/fakedb.js";
 import "./Shop.css";
+import { Link } from "react-router-dom";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -71,7 +71,11 @@ const Shop = () => {
         ))}
       </div>
       <div className="cart-container">
-        <Cart handleClearCart={handleClearCart} cart={cart}></Cart>
+        <Cart handleClearCart={handleClearCart} cart={cart}>
+          <Link to="orders" className="proceed-link">
+            <button className="button-proceed">Review Order</button>
+          </Link>
+        </Cart>
       </div>
     </div>
   );

@@ -4,6 +4,8 @@ import { useLoaderData } from "react-router-dom";
 import ReviewItem from "../ReviewItem/ReviewItem";
 import "./Orders.css";
 import { removeFromDb, deleteShoppingCart } from "../../utilities/fakedb.js";
+import { Link } from "react-router-dom";
+
 
 const Orders = () => {
   const savedCart = useLoaderData();
@@ -30,9 +32,14 @@ const Orders = () => {
           ></ReviewItem>
         ))}
       </div>
-      <dir className="cart-container">
-        <Cart cart={cart} handleClearCart={handleClearCart}></Cart>
-      </dir>
+      <div className="cart-container">
+        <Cart cart={cart} handleClearCart={handleClearCart}>
+          <Link className="proceed-link" to='/checkout'>
+            <button className="button-proceed">Proceed CheckOut</button>
+          </Link>
+
+        </Cart>
+      </div>
     </div>
   );
 };
