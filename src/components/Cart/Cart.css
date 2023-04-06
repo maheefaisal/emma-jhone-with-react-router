@@ -1,9 +1,19 @@
-.cart{
-    background-color: orange;
-    padding: 25px;
-    position: sticky;
-    top: 0;
+.cart {
+  background-color: orange;
+  padding: 25px;
+  position: sticky;
+  top: 0;
 }
-.cart p{
-    font-size:17px;
+.cart p {
+  font-size: 17px;
+}
+.button-clear {
+  width: 100%;
+  margin: 10px auto;
+  background-color: orangered;
+  color: whitesmoke;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
